@@ -1,0 +1,12 @@
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.nav-menu h3 {
+  font-size: 2rem;
+  color: #3f2657a3;;
+}

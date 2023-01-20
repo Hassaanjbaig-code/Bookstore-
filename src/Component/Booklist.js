@@ -7,6 +7,7 @@ const Booklist = (props) => {
       <li id={id}>
             <h3>{Title}</h3>
             <h3>{Author}</h3>
+            <button type='button'> Remove </button>
         </li>
     </>
   )

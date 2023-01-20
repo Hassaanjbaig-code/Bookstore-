@@ -24,15 +24,13 @@
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-- HTML
-- CSS
-- JavaScript
+- JSX (HTML, CSS)
 - React 
 
 ### Key Features <a name="key-features"></a>
 - React 
 - Gitflow
-- Asyn 
+- Routes and Route
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

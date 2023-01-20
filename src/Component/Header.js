@@ -1,20 +1,20 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
-    const links = [
-        {
-            id: 1,
-            path: '/',
-            text: 'Book'
-        },
-        {
-            id: 1,
-            path: '/Categories',
-            text: 'Categories'
-        }
-    ]
+  const links = [
+    {
+      id: 1,
+      path: '/',
+      text: 'Book',
+    },
+    {
+      id: 1,
+      path: '/Categories',
+      text: 'Categories',
+    },
+  ];
   return (
     <nav className="nav-bar">
       <ul className="nav-menu">
@@ -28,7 +28,7 @@ const Header = () => {
         ))}
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

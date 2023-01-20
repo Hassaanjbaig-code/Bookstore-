@@ -11,18 +11,21 @@ const BooksContainer = () => {
   const store = [
     {
       id: 1,
-      Title: "Hello",
-      Author: "Yes",
+      bookcategory: 'Action',
+      Title: "The Hunger Games",
+      Author: "Suzanne Collins",
     },
     {
       id: 2,
-      Title: "Hello",
-      Author: "Yes",
+      bookcategory: 'Science Fiction',
+      Title: "Dune",
+      Author: "Frank Herbert",
     },
     {
       id: 3,
-      Title: "Hello",
-      Author: "Yes",
+      bookcategory: 'Economy',
+      Title: "Capital in the Twenty-First Century",
+      Author: "Suzanne Collins",
     },
   ];
 

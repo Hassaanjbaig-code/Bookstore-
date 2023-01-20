@@ -1,0 +1,14 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 24%;
+  line-height: 1px;
+}
+
+input {
+  margin-bottom: 0;
+}
+
+.submitfrom {
+  width: 5rem;
+}

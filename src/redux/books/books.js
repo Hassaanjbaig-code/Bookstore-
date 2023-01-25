@@ -21,8 +21,8 @@ const initialstate = [
   },
 ];
 
-const AddBooks = createAction('books/add');
-const RemoveBooks = createAction('books/remove');
+const AddBooks = createAction('bookstore/books/ADD_BOOK');
+const RemoveBooks = createAction('bookstore/books/REMOVE_BOOK');
 
 const books = createReducer(initialstate, (builder) => {
   builder.addCase(AddBooks, (state, action) => {

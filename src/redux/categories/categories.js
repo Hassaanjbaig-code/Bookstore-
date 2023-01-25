@@ -1,6 +1,6 @@
 import { createAction, createReducer } from '@reduxjs/toolkit';
 
-const CheckStatus = createAction('categories/Check_Status');
+const CheckStatus = createAction('bookstore/categories/CHECK_STATUS');
 
 const initialstate = {};
 

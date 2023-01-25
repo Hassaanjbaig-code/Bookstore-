@@ -21,15 +21,17 @@ const initialstate = [
   },
 ];
 
-const Add_Books = createAction('books/add');
-const Remove_Books = createAction('books/remove');
+const AddBooks = createAction('books/add');
+const RemoveBooks = createAction('books/remove');
 
 const books = createReducer(initialstate, (builder) => {
-  builder.addCase(Add_Books, (state, action) => {
+  builder.addCase(AddBooks, (state, action) => {
     state.push(action.payload);
   });
-  builder.addCase(Remove_Books, (state, action) => {
+  builder.addCase(RemoveBooks, (state, action) => {
     state.filter((book) => book.id !== action.payload);
   });
   builder.addDefaultCase((state) => state);
 });
+
+export default books;

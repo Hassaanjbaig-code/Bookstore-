@@ -21,15 +21,16 @@ const initialstate = [
   },
 ];
 
-const AddBooks = createAction('bookstore/books/ADD_BOOK');
-const RemoveBooks = createAction('bookstore/books/REMOVE_BOOK');
+export const AddBooks = createAction('bookstore/books/ADD_BOOK');
+export const RemoveBooks = createAction('bookstore/books/REMOVE_BOOK');
 
 const books = createReducer(initialstate, (builder) => {
   builder.addCase(AddBooks, (state, action) => {
     state.push(action.payload);
   });
-  builder.addCase(RemoveBooks, (state, action) => {
-    state.filter((book) => book.id !== action.payload);
+  builder.addCase(RemoveBooks, (state = [...initialstate], action) => {
+    const newstate = state.filter((book) => book.id !== action.payload);
+    return newstate;
   });
   builder.addDefaultCase((state) => state);
 });

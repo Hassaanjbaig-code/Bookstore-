@@ -1,12 +1,18 @@
 form {
   display: flex;
   flex-direction: column;
-  width: 24%;
   line-height: 1px;
 }
 
-input {
+.text {
+  width: 15rem;
+  height: 2rem;
+  font-size: 1.3rem;
   margin-bottom: 0;
+}
+
+select {
+  width: 10rem;
 }
 
 .submitfrom {

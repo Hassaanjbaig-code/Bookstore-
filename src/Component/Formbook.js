@@ -29,6 +29,8 @@ const Formbook = () => {
       <input
         type="text"
         name="title"
+        required
+        className="text"
         onChange={(e) => {
           setTitle(e.target.value);
         }}
@@ -37,12 +39,15 @@ const Formbook = () => {
       <input
         type="text"
         name="Author"
+        required
+        className="text"
         onChange={(e) => {
           setAuthor(e.target.value);
         }}
         placeholder="Add Author"
       />
-      <select value={categories} onChange={(e) => setCategories(e.target.value)}>
+      <select required value={categories} onChange={(e) => setCategories(e.target.value)}>
+        <option> </option>
         <option value="Action">Action</option>
         <option value="Science Fiction">Science Fiction</option>
         <option value="Economy">Economy</option>

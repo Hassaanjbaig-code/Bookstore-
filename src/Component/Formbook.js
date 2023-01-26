@@ -20,8 +20,6 @@ const Formbook = () => {
         Author: author,
       }),
     );
-    setTitle('');
-    setAuthor('');
   };
   return (
     <form onSubmit={handleclick}>

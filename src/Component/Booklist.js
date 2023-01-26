@@ -11,7 +11,6 @@ const Booklist = (props) => {
     },
   } = props;
   const handleClick = () => {
-    console.log(id);
     dispatch(RemoveBooks(id));
   };
   return (

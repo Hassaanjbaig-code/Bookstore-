@@ -29,13 +29,17 @@ const Formbook = () => {
       <input
         type="text"
         name="title"
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={(e) => {
+          setTitle(e.target.value);
+        }}
         placeholder="Add title"
       />
       <input
         type="text"
         name="Author"
-        onChange={(e) => setAuthor(e.target.value)}
+        onChange={(e) => {
+          setAuthor(e.target.value);
+        }}
         placeholder="Add Author"
       />
       <select value={categories} onChange={(e) => setCategories(e.target.value)}>

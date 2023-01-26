@@ -1,10 +1,18 @@
+/* eslint-disable */
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { CheckStatus } from '../redux/categories/categories';
 
-const Categories = () => (
-  <div>
-    <h3>Under construction</h3>
-    <input type="button" value="check status" />
-  </div>
-);
+const categories = () => {
+  const dispatch = useDispatch();
+  const handle = useSelector((state) => state.Categories.status)
+  const handleClick = () => dispatch(CheckStatus());
+  return (
+    <div>
+      <h3>{handle}</h3>
+      <button onClick={handleClick} type='button'>CheckStatus</button>
+    </div>
+  )
+}
 
-export default Categories;
+export default categories;

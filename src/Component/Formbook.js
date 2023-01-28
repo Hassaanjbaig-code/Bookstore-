@@ -15,6 +15,8 @@ const Formbook = () => {
       id: nanoid(), title, author, category,
     };
     dispatch(postData(newbook));
+    setTitle('');
+    setAuthor('');
   };
   return (
     <form onSubmit={handleclick}>
@@ -22,6 +24,7 @@ const Formbook = () => {
       <input
         type="text"
         name="title"
+        value={title}
         required
         className="text"
         onChange={(e) => {
@@ -32,6 +35,7 @@ const Formbook = () => {
       <input
         type="text"
         name="Author"
+        value={author}
         required
         className="text"
         onChange={(e) => {

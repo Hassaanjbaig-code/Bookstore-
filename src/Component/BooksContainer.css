@@ -52,6 +52,10 @@ button {
   background: #fff;
 }
 
+.Progress p span:nth-child(2) {
+  font-size: 1rem;
+}
+
 .current-chapter-container {
   font-size: 20px;
 }

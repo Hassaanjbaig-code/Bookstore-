@@ -10,10 +10,10 @@ form {
   justify-content: space-evenly;
 }
 
-h3 {
+.Add-Form h3 {
   font-size: 1.25rem;
   font-weight: 700;
-  letter-spacing: -.18px;
+  letter-spacing: 3px;
   color: #888;
 }
 
@@ -23,7 +23,7 @@ h3 {
   border: 1px solid #e8e8e8;
   background-color: #fff;
   font-size: 1rem;
-  letter-spacing: -.15px;
+  letter-spacing: 2px;
   color: #121212;
 }
 

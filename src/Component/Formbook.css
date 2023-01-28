@@ -1,20 +1,49 @@
+.Add-Form {
+  height: 7rem;
+  border-top: 1px solid #e8e8e9;
+}
+
 form {
   display: flex;
-  flex-direction: column;
   line-height: 1px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.Add-Form h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #888;
 }
 
 .text {
-  width: 15rem;
-  height: 2rem;
-  font-size: 1.3rem;
-  margin-bottom: 0;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: #121212;
 }
 
 select {
-  width: 10rem;
+  width: 6rem;
+  height: 2rem;
+  border: none;
+  background-color: #fff;
 }
 
 .submitfrom {
   width: 5rem;
+  height: 2rem;
+  border: none;
+  background: #0000ff70;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submitfrom:active {
+  background-color: #0000ffc4;
 }

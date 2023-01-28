@@ -2,3 +2,79 @@
   height: 47vh;
   overflow-y: scroll;
 }
+
+ul {
+  background-color: #fafafa;
+}
+
+.show {
+  list-style: none;
+  line-height: 0.6rem;
+  width: 86%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10px 30px 22px;
+  background-color: #fff;
+  border: 1px solid #f3f4f5;
+}
+
+button {
+  background: none;
+  border: none;
+  color: #0000ff9c;
+  border-right: solid 1px grey;
+  padding-right: 6px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+.main-data-show {
+  line-height: 25px;
+  background-color: #fff;
+}
+
+.Progress {
+  font-size: 1.6rem;
+  display: flex;
+  gap: 12px;
+  background-color: #fff;
+}
+
+.Progress p {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.Progress p span {
+  margin-bottom: 12px;
+  background: #fff;
+}
+
+.Progress p span:nth-child(2) {
+  font-size: 1rem;
+}
+
+.current-chapter-container {
+  font-size: 20px;
+}
+
+.current-chapter-container p {
+  margin-bottom: 21px;
+}
+
+.primary-button {
+  background-color: blue;
+  color: whitesmoke;
+  padding: 10px;
+  border-radius: 9px;
+}
+
+.Progress-show {
+  border: 5px solid #e8e8e8;
+  width: 50px;
+  height: 59px;
+  border-radius: 2rem;
+  background: none;
+}

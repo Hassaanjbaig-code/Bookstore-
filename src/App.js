@@ -13,13 +13,13 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div className="main">
         <Header />
         <Routes>
           <Route path="/" element={<BooksContainer />} />
           <Route path="/Categories" element={<Categories />} />
         </Routes>
-      </>
+      </div>
     );
   }
 }

@@ -9,7 +9,7 @@ const apiID = "dEKTcaMjVTpVo4TTyLFG";
 const url2 = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${apiID}/books`;
 
 export const fetchData = createAsyncThunk("data/fetch", async () => {
-  const response = await fetch(url2);
+  const response = await fetch(url);
   const datafound = await response.json();
   const listbook = [];
   Object.keys(datafound).forEach((keys) => {
@@ -26,7 +26,7 @@ export const fetchData = createAsyncThunk("data/fetch", async () => {
 });
 
 export const postData = createAsyncThunk("data/Post", async (book) => {
-  await fetch(url2, {
+  await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -40,7 +40,7 @@ export const postData = createAsyncThunk("data/Post", async (book) => {
 });
 
 export const deleteData = createAsyncThunk("data/Delete", async (id) => {
-  await fetch(`${url2}/${id}`, {
+  await fetch(`${url}/${id}`, {
     method: "DELETE",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({

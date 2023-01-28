@@ -21,7 +21,6 @@ export const fetchData = createAsyncThunk("data/fetch", async () => {
     };
     listbook.push(book);
   });
-  console.log(listbook);
   return listbook;
 });
 

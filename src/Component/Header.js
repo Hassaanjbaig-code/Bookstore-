@@ -18,10 +18,10 @@ const Header = () => {
   return (
     <nav className="nav-bar">
       <ul className="nav-menu">
-        <h3>Bookstore CMS</h3>
+        <h3 className="white">Bookstore CMS</h3>
         {links.map((link) => (
           <li key={link.id}>
-            <NavLink to={link.path} className="nav-item">
+            <NavLink to={link.path} className="nav-item white">
               {link.text}
             </NavLink>
           </li>

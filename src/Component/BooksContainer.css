@@ -10,6 +10,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  background-color: #fff;
+  border: 1px solid #f3f4f5;
 }
 
 button {
@@ -18,14 +20,18 @@ button {
   color: #0000ff9c;
   border-right: solid 1px grey;
   padding-right: 6px;
+  margin-right: 3px;
+  cursor: pointer;
 }
 
 .main-data-show {
   line-height: 25px;
+  background-color: #fff;
 }
 
 .Progress {
   font-size: 1.6rem;
+  background-color: #fff;
 }
 
 .current-chapter-container {

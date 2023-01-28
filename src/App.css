@@ -1,4 +1,13 @@
 * {
-  margin: 9px;
   padding: 0;
+  background-color: #f3f4f5;
+}
+
+.main {
+  width: 90%;
+  margin: 0 5%;
+}
+
+.white {
+  background-color: #fff;
 }

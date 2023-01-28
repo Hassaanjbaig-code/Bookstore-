@@ -1,10 +1,18 @@
+.Add-Form {
+  height: 7rem;
+  border: 1px solid #91b5da;
+}
+
 form {
   display: flex;
   line-height: 1px;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 h3 {
   font-size: 1.3rem;
+  margin: 12px;
 }
 
 .text {
@@ -12,12 +20,24 @@ h3 {
   height: 2rem;
   font-size: 1.3rem;
   margin-bottom: 0;
+  padding: 5px;
 }
 
 select {
-  width: 10rem;
+  width: 6rem;
+  height: 2rem;
 }
 
 .submitfrom {
   width: 5rem;
+  height: 2rem;
+  border: none;
+  background: #0000ff70;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submitfrom:active {
+  background-color: #0000ffc4;
 }

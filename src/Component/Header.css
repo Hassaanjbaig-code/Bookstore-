@@ -4,9 +4,21 @@
   text-decoration: none;
   width: 100%;
   justify-content: space-evenly;
+  align-items: center;
+  height: 3rem;
+  background-color: #fff;
+  margin: 0;
 }
 
 .nav-menu h3 {
   font-size: 2rem;
   color: #3f2657a3;
+}
+
+li a {
+  text-decoration: none;
+}
+
+.active {
+  color: #0000ffc4;
 }

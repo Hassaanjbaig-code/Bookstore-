@@ -1,25 +1,22 @@
 import React, { useState } from 'react';
-import './Formbook.css';
 import { useDispatch } from 'react-redux';
-import { AddBooks } from '../redux/books/books';
-
-let counter = 3;
+import { nanoid } from '@reduxjs/toolkit';
+import { postData } from '../redux/books/bookapi';
+import './Formbook.css';
 
 const Formbook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [categories, setCategories] = useState('');
+  const [category, setCategories] = useState('');
   const dispatch = useDispatch();
   const handleclick = (e) => {
     e.preventDefault();
-    dispatch(
-      AddBooks({
-        id: counter += 1,
-        bookcategory: categories,
-        Title: title,
-        Author: author,
-      }),
-    );
+    const newbook = {
+      id: nanoid(), title, author, category,
+    };
+    dispatch(postData(newbook));
+    setTitle('');
+    setAuthor('');
   };
   return (
     <form onSubmit={handleclick}>
@@ -27,6 +24,7 @@ const Formbook = () => {
       <input
         type="text"
         name="title"
+        value={title}
         required
         className="text"
         onChange={(e) => {
@@ -37,6 +35,7 @@ const Formbook = () => {
       <input
         type="text"
         name="Author"
+        value={author}
         required
         className="text"
         onChange={(e) => {
@@ -44,7 +43,7 @@ const Formbook = () => {
         }}
         placeholder="Add Author"
       />
-      <select required value={categories} onChange={(e) => setCategories(e.target.value)}>
+      <select required value={category} onChange={(e) => setCategories(e.target.value)}>
         <option> </option>
         <option value="Action">Action</option>
         <option value="Science Fiction">Science Fiction</option>

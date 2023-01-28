@@ -1,7 +1,10 @@
 form {
   display: flex;
-  flex-direction: column;
   line-height: 1px;
+}
+
+h3 {
+  font-size: 1.3rem;
 }
 
 .text {

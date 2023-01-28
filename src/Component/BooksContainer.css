@@ -2,3 +2,43 @@
   height: 47vh;
   overflow-y: scroll;
 }
+
+.show {
+  list-style: none;
+  line-height: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+button {
+  background: none;
+  border: none;
+  color: #0000ff9c;
+  border-right: solid 1px grey;
+  padding-right: 6px;
+}
+
+.main-data-show {
+  line-height: 25px;
+}
+
+.Progress {
+  font-size: 1.6rem;
+}
+
+.current-chapter-container {
+  font-size: 20px;
+}
+
+.current-chapter-container p {
+  margin-bottom: 21px;
+}
+
+.primary-button {
+  background-color: blue;
+  color: whitesmoke;
+  padding: 10px;
+  border-radius: 9px;
+}

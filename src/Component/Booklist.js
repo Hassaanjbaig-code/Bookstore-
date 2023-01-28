@@ -1,18 +1,12 @@
 import React from 'react';
 import './Booklist.css';
-// import { useDispatch } from 'react-redux';
-// import { RemoveBooks } from '../redux/books/books';
 
 const Booklist = (props) => {
-  // const dispatch = useDispatch();
   const {
     store: {
       id, bookcategory, Title, Author,
     },
   } = props;
-  // const handleClick = () => {
-  //   dispatch(RemoveBooks(id));
-  // };
   return (
     <>
       <li className="Show" id={id}>

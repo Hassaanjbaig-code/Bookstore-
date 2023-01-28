@@ -1,14 +1,8 @@
-/* eslint-disable */
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { useDispatch } from "react-redux";
-import axios from "axios";
-// gOZ6ayJ9IcL8x7y2ImTP
-const url =
-  "https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/gOZ6ayJ9IcL8x7y2ImTP/books";
-const apiID = "dEKTcaMjVTpVo4TTyLFG";
-const url2 = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${apiID}/books`;
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-export const fetchData = createAsyncThunk("data/fetch", async () => {
+// gOZ6ayJ9IcL8x7y2ImTP
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/gOZ6ayJ9IcL8x7y2ImTP/books';
+export const fetchData = createAsyncThunk('data/fetch', async () => {
   const response = await fetch(url);
   const datafound = await response.json();
   const listbook = [];
@@ -24,10 +18,10 @@ export const fetchData = createAsyncThunk("data/fetch", async () => {
   return listbook;
 });
 
-export const postData = createAsyncThunk("data/Post", async (book) => {
+export const postData = createAsyncThunk('data/Post', async (book) => {
   await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       item_id: book.id,
       title: book.title,
@@ -38,10 +32,10 @@ export const postData = createAsyncThunk("data/Post", async (book) => {
   return book;
 });
 
-export const deleteData = createAsyncThunk("data/Delete", async (id) => {
+export const deleteData = createAsyncThunk('data/Delete', async (id) => {
   await fetch(`${url}/${id}`, {
-    method: "DELETE",
-    headers: { "Content-Type": "application/json" },
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       item_id: id,
     }),
@@ -50,12 +44,13 @@ export const deleteData = createAsyncThunk("data/Delete", async (id) => {
 });
 
 const dataSlice = createSlice({
-  name: "books",
+  name: 'books',
   initialState: { data: [] },
   reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchData.fulfilled, (state, action) => {
+        // eslint-disable-next-line no-param-reassign
         state.data = action.payload;
       })
       .addCase(postData.fulfilled, (state, action) => {
@@ -63,7 +58,7 @@ const dataSlice = createSlice({
       })
       .addCase(deleteData.fulfilled, (state, action) => {
         const updatebook = [...state.data].filter(
-          (data) => data.id !== action.payload
+          (data) => data.id !== action.payload,
         );
         return { ...state, data: updatebook };
       });

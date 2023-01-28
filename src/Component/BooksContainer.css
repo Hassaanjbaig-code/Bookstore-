@@ -3,13 +3,18 @@
   overflow-y: scroll;
 }
 
+ul {
+  background-color: #fafafa;
+}
+
 .show {
   list-style: none;
   line-height: 0.6rem;
+  width: 86%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 30px 10px 30px 22px;
   background-color: #fff;
   border: 1px solid #f3f4f5;
 }
@@ -31,7 +36,20 @@ button {
 
 .Progress {
   font-size: 1.6rem;
+  display: flex;
+  gap: 12px;
   background-color: #fff;
+}
+
+.Progress p {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.Progress p span {
+  margin-bottom: 12px;
+  background: #fff;
 }
 
 .current-chapter-container {
@@ -47,4 +65,12 @@ button {
   color: whitesmoke;
   padding: 10px;
   border-radius: 9px;
+}
+
+.Progress-show {
+  border: 5px solid #e8e8e8;
+  width: 50px;
+  height: 59px;
+  border-radius: 2rem;
+  background: none;
 }

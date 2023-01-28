@@ -19,14 +19,14 @@ const Formbook = () => {
     setAuthor('');
   };
   return (
-    <div className="Add-Form white">
-      <h3 className="white">Add new Books</h3>
-      <form className="white" onSubmit={handleclick}>
+    <div className="Add-Form">
+      <h3>Add new Books</h3>
+      <form onSubmit={handleclick}>
         <input
           type="text"
           name="title"
           required
-          className="text white"
+          className="text"
           onChange={(e) => {
             setTitle(e.target.value);
           }}
@@ -48,7 +48,7 @@ const Formbook = () => {
           <option value="Science Fiction">Science Fiction</option>
           <option value="Economy">Economy</option>
         </select>
-        <input className="submitfrom white" type="submit" value="Add Book" />
+        <input className="submitfrom" type="submit" value="Add Book" />
       </form>
     </div>
   );

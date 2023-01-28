@@ -28,7 +28,11 @@ const BooksContainer = () => {
               <button type="button">Edit</button>
             </div>
             <div className="Progress white">
-              <p>0% Completed</p>
+              <div className="Progress-show" />
+              <p>
+                <span>0%</span>
+                <span>Completed</span>
+              </p>
             </div>
             <div className="current-chapter-container white">
               <p className="white">CURRENT CHAPTER</p>

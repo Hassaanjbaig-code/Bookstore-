@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { FaUser } from 'react-icons/fa';
 import './Header.css';
 
 const Header = () => {
@@ -17,16 +19,21 @@ const Header = () => {
   ];
   return (
     <nav className="nav-bar">
-      <ul className="nav-menu">
-        <h3 className="white">Bookstore CMS</h3>
-        {links.map((link) => (
-          <li key={link.id}>
-            <NavLink to={link.path} className="nav-item white">
-              {link.text}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
+      <div className="nav-connect">
+        <ul className="nav-menu">
+          <h3 className="white">Bookstore CMS</h3>
+          {links.map((link) => (
+            <li key={link.id}>
+              <NavLink to={link.path} className="nav-item white">
+                {link.text}
+              </NavLink>
+            </li>
+          ))}
+          <button className="user-icon-control" type="button">
+            <FaUser className="user-icon" />
+          </button>
+        </ul>
+      </div>
     </nav>
   );
 };

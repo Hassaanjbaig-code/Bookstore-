@@ -2,10 +2,8 @@
   display: flex;
   list-style: none;
   text-decoration: none;
-  width: 100%;
-  justify-content: space-evenly;
   align-items: center;
-  height: 3rem;
+  height: 6rem;
   background-color: #fff;
   margin: 0;
 }
@@ -15,10 +13,23 @@
   color: #3f2657a3;
 }
 
+li {
+  margin-left: 25px;
+}
+
 li a {
   text-decoration: none;
 }
 
 .active {
   color: #0000ffc4;
+}
+
+.user-icon-control {
+  font-size: 14px;
+  position: relative;
+  left: 32rem;
+  border: 2px solid;
+  padding: 12px;
+  border-radius: 2rem;
 }

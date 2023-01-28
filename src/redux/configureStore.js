@@ -1,13 +1,12 @@
-import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import thunk from 'redux-thunk';
+import { configureStore } from '@reduxjs/toolkit';
+import categoriesReducer from './categories/categories';
 import dataSlice from './books/bookapi';
 
 const store = configureStore({
   reducer: {
-    books: dataSlice,
+    category: categoriesReducer,
+    bookApi: dataSlice.reducer, // to the api storage
   },
-},
-applyMiddleware((thunk)));
+});
 
 export default store;
